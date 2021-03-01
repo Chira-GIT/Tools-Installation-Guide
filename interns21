@@ -1,0 +1,176 @@
+                                                 : Procedures for installing the tools :
+
+
+1.Command line Tools
+Check if it is pre-installed,using
+$ xcode-select --version
+If not, then install it running the following command.
+$ xcode-select --install
+
+
+2.Homebrew
+Given 2 methods ,use any of the following method to install Homebrew :
+Method 1 :
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+Refer : https://brew.sh/
+
+Method 2 :
+To Download the Homebrew
+$ curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/master/install.sh
+To install homebrew
+$ /bin/bash install.sh
+Refer : https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-macos
+
+
+2.JAVA 8
+First verify if the Java is already installed using the command “java -version”
+
+If Not, then follow the instructions to install it,
+Download the macOS x64	jdk-8u281-macosx-x64.dmg file from here:
+https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+Double-click the downloaded Disk Image (DMG) file. Follow the on screen instructions to install JDK.
+Once done, To verify your installation, open a "Terminal" and issue these commands
+// Display the JDK version
+$ javac -version
+// Display the location of Java Compiler
+$ which javac
+// Display the location of Java Runtime
+$ which java
+Set JAVA_HOME
+$ export JAVA_HOME=$(/usr/libexec/java_home)
+Verify once
+$ echo $JAVA_HOME
+Refer : https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html
+*Alternatively you can install openjdk from here
+https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot
+
+
+
+4.Node 8
+$ brew install nvm
+$ mkdir ~/.nvm/
+Configure your environmental variables
+$ vim ~/.bash_profile
+Paste the following in it:
+$ export NVM_DIR="$HOME/.nvm"
+$ source $(brew --prefix nvm)/nvm.sh
+Execute the content we just pasted.
+$ source ~/.bash_profile
+Check if it is installed correctly :
+$ nvm ls
+Install Node :
+$ nvm install 8.17.0
+check your installation :
+$ nvm ls
+(Optional)Set the current version as default :
+$ nvm alias default 8.17.0
+Refer : https://www.chrisjmendez.com/2018/02/07/install/
+
+
+5.Python 3.8
+Download the Installation file from here :
+https://www.python.org/downloads/release/python-388/
+Double click on downloaded file and follow the on screen instructions.
+Verify the version :
+$  python3 --version
+
+
+6.Sequel Pro
+Link to download : https://sequelpro.com/test-builds
+
+
+7.IntelliJ
+Link to download (community version) : https://www.jetbrains.com/idea/download/#section=mac
+
+
+8.Tomcat 9 
+Dependencies: JAVA , Homebrew
+Step 1: Install Apache Tomcat
+$ brew update
+$ brew install tomcat
+Step 2: Run Apache Tomcat 
+$ brew services start tomcat
+Refer : https://medium.com/@fahimhossain_16989/installing-apache-tomcat-on-macos-mojave-using-homebrew-28ce039b4b2e
+
+
+9.Mysql 5.7
+Refer the instructions given in this article to install mysql 5.7 :
+https://gist.github.com/operatino/392614486ce4421063b9dece4dfe6c21
+
+
+10.Redis
+$ brew install redis
+Start redis:
+$ brew services start redis
+Refer : https://phoenixnap.com/kb/install-redis-on-mac
+
+
+11.Unarchiever 
+install it from here
+https://apps.apple.com/us/app/the-unarchiver/id425424353?mt=12
+
+
+12.Gradle
+First, verify if it is already installed.
+$ gradle --version 
+If Not then install it
+$ brew install gradle
+
+
+13.Maven
+First, verify if it is already installed.
+$ mvn -version
+If Not then install it,
+Download the  file “apache-maven-3.6.3-bin.tar.gz” from this link https://maven.apache.org/download.cgi 
+
+And follow the steps given in this page to install & configure maven.
+https://maven.apache.org/install.html
+
+
+
+14.Code Editors:
+Install any of the Code editors of your choice. Such as VS Code, Sublime text
+*VS Code
+Download and setup VS code using the instructions given here
+https://code.visualstudio.com/docs/setup/mac
+
+
+*Sublime Text
+Download the file for OS X from this link
+https://www.sublimetext.com/3
+
+
+15.iTerm
+Install it from here
+https://iterm2.com/
+
+
+16.Postman
+Download the setup from Web:
+$ curl https://dl.pstmn.io/download/latest/osx -o Postman-mac.zip
+After the setup is downloaded, unzip the setup: 
+$ unzip -q Postman-mac.zip
+Install the application:
+$ open Postman.app
+
+
+17.Kafka  (Optional)
+install Kafka on Mac using Homebrew:
+$ brew install kafka
+Now start Zookeeper and Kafka:
+Start Zookeeper:
+$ zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+Start Kafka server:
+$ kafka-server-start /usr/local/etc/kafka/server.properties
+Refer : https://medium.com/@Ankitthakur/apache-kafka-installation-on-mac-using-homebrew-a367cdefd273
+
+
+18.IDE
+*Android Studio (Optional)
+Download and setup Android Studio using the instructions given here
+https://treehouse.github.io/installation-guides/mac/android-studio-mac.html
+
+
+
+
+
