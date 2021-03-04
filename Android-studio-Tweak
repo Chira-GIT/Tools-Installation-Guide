@@ -1,0 +1,40 @@
+You can do few simple changes to speed up AndroidStudio  
+Follow the steps
+
+
+1. Go to Android -> Preferences
+Click on Build, Execution, Deployment
+Click on -> Compiler
+Check the Option -
+Compile independent modules in parallel (may require larger heap size)
+
+Restart Android Studio.
+
+2: Help > Edit Custom VM Options
+
+Add/change the following lines in your file and save it.
+
+Newly Updated Options (You can even increase more based on your Mac or PC’s RAM speed)
+-Xms512m
+-Xmx2560m
+-XX:MaxPermSize=700m
+-XX:ReservedCodeCacheSize=480m
+
+or make your own 
+
+-Xms1024m 
+-Xmx4096m # <------ increase this to most of your RAM 
+-XX:MaxPermSize=1024m 
+-XX:ReservedCodeCacheSize=440m 
+-XX:+UseCompressedOops 
+-XX:-HeapDumpOnOutOfMemoryError 
+-Dfile.encoding=UTF-8
+
+3. In case if the Android Studio doesn’t open, which means you’re old vm option file got cached somewhere.
+Follow these simple commands in your command line and remove the old file.
+> cd ~/Library
+> cd Preferences
+> cd AndroidStudio3.1 (This should be your current Android Studio version )
+> rm studio.vmoptions
+
+
