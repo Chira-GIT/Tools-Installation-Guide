@@ -95,10 +95,10 @@ Refer : https://medium.com/@fahimhossain_16989/installing-apache-tomcat-on-macos
 
 9.Mysql 5.7
 Refer the instructions given in this article to install mysql 5.7 :
-https://gist.github.com/operatino/392614486ce4421063b9dece4dfe6c21
+https://flaviocopes.com/mysql-how-to-install/
 
 Alternatively you can install it using :
-https://flaviocopes.com/mysql-how-to-install/
+https://gist.github.com/operatino/392614486ce4421063b9dece4dfe6c21
 
 
 
